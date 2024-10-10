@@ -56,9 +56,6 @@ public class Main {
                itemEntity.setPickupDelay(Duration.ofMillis(500));
            }
 
-           event.setCancelled(true);
-           player.sendMessage("You cant break blocks.");
-
         });
 
         EventNode<Event> allNode = EventNode.all("all");
