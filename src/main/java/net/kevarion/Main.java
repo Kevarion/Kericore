@@ -90,7 +90,7 @@ public class Main {
                         //expireWhen == basically, in this case, when you hold a grass block in your main hand, the event will stop listening.
                         .expireWhen(playerStartSneakingEvent -> {
                             if (playerStartSneakingEvent.getPlayer().getInventory().getItemInMainHand().material() == Material.GRASS_BLOCK) {
-                                playerStartSneakingEvent.getPlayer().sendMessage("You found grass. Good job <3");
+                                playerStartSneakingEvent.getPlayer().sendMessage("You found grass. Good job!");
                                 return true;
                             }
                             return false;
