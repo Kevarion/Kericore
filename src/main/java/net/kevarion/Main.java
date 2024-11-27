@@ -1,5 +1,7 @@
 package net.kevarion;
 
+import net.kevarion.command.FartCommand;
+import net.kevarion.command.SetHealthCommand;
 import net.minestom.server.MinecraftServer;
 import net.minestom.server.coordinate.Pos;
 import net.minestom.server.entity.ItemEntity;
@@ -99,9 +101,12 @@ public class Main {
                     System.out.println("Player started sneaking on the ground.");
                 }).build()
         );
-        playerNode.addChild(groundedPlayersNode);
 
+        playerNode.addChild(groundedPlayersNode);
         globalEventHandler.addChild(allNode);
+
+        MinecraftServer.getCommandManager().register(new FartCommand());
+        MinecraftServer.getCommandManager().register(new SetHealthCommand());
 
         MojangAuth.init();
 
