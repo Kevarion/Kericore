@@ -18,7 +18,6 @@ public class FartCommand extends Command {
         var fartTarget = ArgumentType.String("fartTarget");
 
         addSyntax((sender, context) -> {
-            // im coding my server rn
 
             // get the argument from the context
             int fartAmount = context.get(fartAmountArg);
